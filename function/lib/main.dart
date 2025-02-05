@@ -20,7 +20,7 @@ Future<dynamic> main(final context) async {
     return context.res.text('Pong');
   }
 
-  if (context.req.path == "/token") {
+  if (context.req.path == "/access-token") {
     final response = await http.post(authUrl, body: body);
     return context.res.json(response.body);
   }
